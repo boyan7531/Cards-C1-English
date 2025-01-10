@@ -2,18 +2,21 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <!-- Update the viewport meta tag in index.html -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Word Flipper</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <div class="container">
+        <div class="word-count-buttons">
+            <button class="count-btn" data-count="5">Last 5 Words</button>
+            <button class="count-btn" data-count="10">Last 10 Words</button>
+            <button class="count-btn" data-count="15">Last 15 Words</button>
+        </div>
         <div class="card">
             <div class="card-inner">
                 <div class="card-front">
-                    <h2 id="word">Click to flip!</h2>
+                    <h2 id="word">Select word count to start!</h2>
                 </div>
                 <div class="card-back">
                     <h3 id="meaning"></h3>
@@ -21,7 +24,7 @@
                 </div>
             </div>
         </div>
-        <button id="nextBtn">Next Word</button>
+        <button id="nextBtn" disabled>Next Word</button>
     </div>
     <script src="script.js"></script>
 </body>
