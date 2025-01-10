@@ -19,8 +19,8 @@ async function loadCSV() {
 }
 
 function setWordCount(count) {
-    // Get the last n words from the full list
-    activeWords = words.slice(-count);
+    // Set activeWords based on count
+    activeWords = count === 'all' ? [...words] : words.slice(-count);
     usedIndices.clear();
     
     // Update UI
@@ -33,7 +33,6 @@ function setWordCount(count) {
     // Start with first word
     nextWord();
 }
-
 function getRandomWord() {
     if (usedIndices.size === activeWords.length) {
         usedIndices.clear();
